@@ -1,0 +1,257 @@
+body, html, div, p, ul, li, h1, h2, h3, h4, h5, h6, button, section, article, aside, span, a {
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    background: #122d45;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+em, strong {
+    font-style: normal;
+}
+
+.index {
+    width: 100%;
+    height: 100%;
+    background: #122d45;
+}
+
+section {
+    /*display: flex;*/
+    width: 80%;
+    height: 58rem;
+    font-size: 10px;
+    color: rgb(239, 123, 51);
+    margin: 0 auto;
+    /*padding: 10px;*/
+    background: rgb(18, 49, 86);
+    border-radius: 5px;
+}
+
+article {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: white;
+
+}
+
+::-webkit-scrollbar {
+    width: 0px
+}
+
+.iconfont {
+    color: rgb(235, 50, 35) !important;
+    /*margin-left: 4px;*/
+    font-size: 18px;
+    line-height: 30px;
+}
+
+/*.icon-xiangxiajiantou{*/
+/*display: none !important;*/
+/*}*/
+article ul li {
+    /*display: flex;*/
+    justify-content: space-between;
+    height: 35px;
+    text-align: center;
+    border-bottom: 2px solid rgb(177, 215, 249);
+}
+
+.index-headers {
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
+    color: black;
+    font-weight: 600;
+}
+
+.index-header {
+    width: 100%;
+    background-color: white;
+    height: 100%;
+}
+
+.index-header a {
+    float: left;
+    display: block;
+    text-align: center;
+    width: 11%;
+    height: 100%;
+    color: black;
+    font-weight: 600;
+    background-color: cornflowerblue;
+    border-right: 2px solid rgb(177, 215, 249);
+}
+
+.index-header a span {
+    display: block;
+    float: left;
+    /*width: 70%;*/
+    height: 100%;
+    line-height: 40px;
+    text-align: right;
+}
+
+.index-header a span:nth-child(1) {
+    width: 70%;
+    margin-right: 5px;
+}
+
+.index-header a:nth-child(1) {
+    width: 34%;
+}
+
+/*.index-header a {*/
+/*display: flex;*/
+/*width: 15%;*/
+/*font-size: 18px;*/
+/*color: black;*/
+/*text-align: center;*/
+/*border-right: 2px solid rgb(177, 215, 249);*/
+/*}*/
+
+/*.index-header a:nth-child(1) {*/
+/*display: block;*/
+/*width: 20% !important;*/
+/*text-align: center;*/
+/*}*/
+
+/*.index-header a span {*/
+/*border-right: none;*/
+/*color: black;*/
+/*font-weight: 700;*/
+/*}*/
+
+/*.index-header a span:nth-child(1) {*/
+/*width: 70%;*/
+/*text-align: right;*/
+/*}*/
+
+article ul li span {
+    float: left;
+    display: block;
+    width: 11%;
+    height: 100%;
+    line-height: 35px;
+    text-overflow: ellipsis;
+    color: #6c6c6c;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid rgb(177, 215, 249);
+}
+
+article ul li a {
+    display: block;
+    float: left;
+    width: 34%;
+    text-align: center;
+    height: 100%;
+    /*overflow: hidden;*/
+    color: rgb(239, 123, 51);
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    border-right: 2px solid rgb(177, 215, 249);
+}
+
+aside {
+    display: block;
+    width: 20%;
+    height: 67rem;
+    font-size: 10px;
+    background: white;
+    border: 1px solid rgb(177, 215, 249);
+    margin-left: 10px;
+}
+
+aside ul {
+    width: 100%;
+    height: 28rem;
+    overflow: auto;
+}
+
+.index-title {
+    color: red;
+    width: 100%;
+    font-weight: 700;
+    padding: 5px;
+    border-bottom: 1px solid rgb(177, 215, 249);
+}
+
+aside ul li a {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    /*color: rgb(239, 123, 51);*/
+    color: black;
+    padding: 4px;
+    font-size: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-bottom: 1px solid rgb(177, 215, 249);
+}
+
+.index-select {
+    width: 100%;
+    height: 10%;
+    margin: 0 auto;
+    color: white;
+}
+
+.index-select h2 {
+    margin: 10px auto 0px;
+}
+
+.index-select .select {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    margin: 10px 0;
+}
+
+.index-select .select input {
+    width: 65%;
+    font-size: 25px;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    font-size: 20px;
+    color: #999;
+
+}
+
+.index-select .select button {
+    width: 100px;
+    font-size: 20px;
+}
+
+.index-select .select button a {
+    display: block;
+    width: 100%;
+    height: 40%;
+    line-height: 40%;
+    color: #999999;
+}
+
+.index-select select {
+    width: 25%;
+    font-size: 20px;
+    margin-right: 10px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static 'css/detail.css' %}"/>
+    <script src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+</head>
+<body>
+<div class="detail">
+    <section>
+        <div class="detail-back"><img src="{% static 'img/back.png' %}"/><b>Back to listing</b></div>
+        <h2>{{ offerdetail.name }}</h2>
+        <div class="detail-content">
+            {% if offerdetail.detail %}
+                <h4>Description</h4>
+                <p>{{ offerdetail.detail }}</p>
+            {% else %}
+                <h4>Description</h4>
+                <p></p>
+            {% endif %}
+{#            <h4>Description</h4>#}
+{#            <p>{{ offerdetail.detail }}</p>#}
+            {#            <p>Flow:</p>#}
+            <p>Affiliate NetWork:{{ offerdetail.sourcename }}</p>
+            <p>Carrier:{{ offerdetail.carrier }}</p>
+            <p>{{ offerdetail.category }}</p>
+            <p>{{ offerdetail.platform }}</p>
+        </div>
+        <div class="detail-content">
+            <h4>Offer Detail</h4>
+            <p class="category">Category:{{ offerdetail.category }}</p>
+            <p>CPA($):</p>
+            <p>{{ offerdetail.payoutValue }}</p>
+            <p class="last-updated">Last Updated:{{ offerdetail.updatetime }}</p>
+        </div>
+    </section>
+</div>
+</body>
+<script>
+    $(function () {
+        $('.detail-back').click(function () {
+            window.history.go(-1)
+        })
+    })
+</script>
+</html>

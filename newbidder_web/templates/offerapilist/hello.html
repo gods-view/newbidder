@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+        {% for item in dicts %}
+{#            {{forloop.counter0}}#}
+{#            <a>{{ item.offer }}</a>#}
+            {% if item.offer == 'test' %}
+                <a>测试成功</a>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</body>
+</html>

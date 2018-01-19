@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>offerapilist</title>
+{#    <script src="{% static 'js/jquery-1.12.4.min.js' %}"></script>#}
+</head>
+<body>
+<form method='POST' action='/login/'>
+    <ul>
+        {% for offer in offers %}
+            <li>
+                <div>{{ offer.offerId }}</div>
+                <div>{{ offer.name }}</div>
+                <div>{{ offer.previewLink }}</div>
+                <div>{{ offer.trackingLink }}</div>
+                <div>{{ offer.countrycode }}</div>
+{#                <a href="#">{{offer.name }}</a>#}
+{#                <a href="#">{{offer.previewLink }}</a>#}
+{#                <a href="#">{{offer.trackinglink }}</a>#}
+{#                <a href="#">{{offer.countrycode }}</a>#}
+                <div>¥ {{ offer.payoutValue }}</div>
+                <div>{{ offer.userid }}</div>
+                <div>{{ offer.category }}</div>
+                <div>{{ offer.carrier }}</div>
+                <div>{{ offer.platform }}</div>
+            </li>
+        {% endfor %}
+    </ul>
+</form>
+
+</body>
+</html>

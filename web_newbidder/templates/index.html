@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>newbidder登录界面</title>
+    <script src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+    <script>
+        $(function () {
+            // 绑定btnLogin的click事件
+            $('#btnLogin').click(function () {
+                // 1.获取用户名和密码
+                username = $('#email').val()
+                password = $('#password').val()
+                csrf = $('input[name="csrfmiddlewaretoken"]').val()
+{#                alert(username)#}
+{#                alert(password)#}
+{#                alert(csrf)#}
+                // 2.发起ajax请求
+                params = {
+                    'email': username,
+                    'password': password,
+                    'csrfmiddlewaretoken': csrf
+                }
+                $.post('/checklogin/', params, function (data) {
+                    // 登录成功 {'res':1} 登录失败 {'res':0}
+                    if (data.res == 0) {
+                        $('#email').next().show().text('用户名或密码错误')
+                    }
+                    else {
+                        // 跳转到首页 /
+                        //location.href = '/' /user/address/
+                        location.href = "/login/"
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+<form method='POST' action='/login/'>
+    {% csrf_token %}
+    <input type="text" id="email" placeholder="请输入用户名">
+    <label></label>
+    <input type="password" id="password" placeholder="请输入密码">
+    <input type='button' id="btnLogin" value='提交'/>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+body, html, div, p, ul, li, h1, h2, h3, h4, h5, h6, button, section, article, aside {
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+em, strong {
+    font-style: normal;
+}
+
+body, html {
+    height: 100%;
+    background: #122d45;
+}
+
+.detail {
+    width: 100%;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.detail section {
+    width: 1000px;
+    /*box-sizing: border-box;*/
+    margin: 50px auto;
+    padding: 20px 40px;
+    background: white;
+    border-radius: 10px;
+}
+
+.detail .detail-back {
+    display: flex;
+    height: 30px;
+}
+
+.detail .detail-back b {
+    line-height: 30px;
+    margin-left: 10px;
+    color: #1784b8;
+}
+
+.detail h2 {
+    color: #ff740d;
+    margin: 20px 0;
+}
+
+.detail .detail-content h4 {
+    margin: 20px 0 10px;
+    font-size: 20px;
+}
+
+.detail .detail-content .category {
+    margin: 10px 0;
+}
+
+.detail-content .last-updated {
+    margin-top: 10px;
+}
+
+section div p {
+    width: 100%;
+    word-break: break-all;
+    font-size: 14px;
+}
